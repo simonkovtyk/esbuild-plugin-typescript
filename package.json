@@ -1,0 +1,61 @@
+{
+	"name": "esbuild-plugin-typescript",
+	"description": "The plugin enhances the build process by seamlessly integrating TypeScript, offering powerful features like type checking, automatic generation of .d.ts files, and ensuring robust type safety throughout.",
+	"keywords": [
+		"frontend",
+		"backend",
+		"packages",
+		"esbuild",
+		"build",
+		"esbuild plugin",
+		"esbuild tool",
+		"build plugin",
+		"build tool",
+		"typescript",
+		"developer tools",
+		"build process",
+		"plugin",
+		"d.ts",
+		"tsc",
+		"type checking",
+		"type check",
+		"esbuild d.ts",
+		"esbuild typescript",
+		"esbuild type check",
+		"esubild type checking",
+		"esbuild tsc"
+	],
+	"license": "MIT",
+	"version": "1.0.0",
+	"bugs": "https://github.com/simonkovtyk/esbuild-plugin-typescript/issues",
+	"homepage": "https://github.com/simonkovtyk/esbuild-plugin-typescript",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/simonkovtyk/esbuild-plugin-typescript.git"
+	},
+	"exports": {
+		".": {
+			"default": "./public-api.js",
+			"types": "./public-api.d.ts"
+		}
+	},
+	"author": {
+		"name": "Simon Kovtyk",
+		"url": "https://github.com/simonkovtyk",
+		"email": "privat@kovtyk.com"
+	},
+	"maintainers": [
+		{
+			"name": "Simon Kovtyk",
+			"url": "https://github.com/simonkovtyk",
+			"email": "privat@kovtyk.com"
+		}
+	],
+	"dependencies": {
+		"esbuild": ">=0.20.0"
+	},
+	"devDependencies": {
+		"@types/node": "^22.5.4",
+		"typescript": "^5.5.4"
+	}
+}
