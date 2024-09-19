@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="196" src="https://raw.githubusercontent.com/simonkovtyk/esbuild-plugin-package-json/d7d77d5766ef9ef97f157c2d221d61a7d3cef51c/docs/esbuild-favicon.svg" />
+<img width="196" src="https://raw.githubusercontent.com/simonkovtyk/esbuild-plugin-typescript/611c5c4942c8460ec6247ab833418908e9213a9b/docs/esbuild-favicon.svg" />
 
 <h1>TypeScript Plugin</h1>
 
