@@ -1,15 +1,15 @@
-type PathOverrides = {
-	overrideConfigPath: string | undefined
+interface PathOverrides {
+  overridePathToTsconfig?: string | undefined;
 }
 
-type HandlerOptions = {
-	tsconfigPath?: string | undefined
-} & PathOverrides
+interface HandlerOptions extends PathOverrides {
+  tsconfigPath?: string | undefined;
+}
 
 type Options = PathOverrides;
 
 export type {
-	PathOverrides,
-	HandlerOptions,
-	Options
-}
+  PathOverrides,
+  HandlerOptions,
+  Options
+};

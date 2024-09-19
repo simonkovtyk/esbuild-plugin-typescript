@@ -1,19 +1,20 @@
 import { Plugin, PluginBuild } from "esbuild";
 import { handlerProcedure } from "./procedures/handler.procedure";
-import { Options } from "./types/options.type";
+import { HandlerOptions, Options } from "./types/options.type";
 
-const typescriptPlugin = (options: Options): Plugin => ({
-	name: "esbuild-plugin-typescript",
-	setup: (build: PluginBuild) => {
-		const handlerUnwrapped = handlerProcedure({
-			...options,
-			tsconfigPath: build.initialOptions.tsconfig
-		});
+const typescriptPlugin = (options?: Options | undefined): Plugin => ({
+  name: "esbuild-plugin-typescript",
+  setup: (build: PluginBuild) => {
+    const handlerOptions: HandlerOptions = {
+      tsconfigPath: options?.overridePathToTsconfig ?? build.initialOptions.tsconfig
+    };
 
-		build.onStart(handlerUnwrapped);
-	}
+    const handlerUnwrapped = handlerProcedure(handlerOptions);
+
+    build.onStart(handlerUnwrapped);
+  }
 });
 
 export {
-	typescriptPlugin
-}
+  typescriptPlugin
+};
