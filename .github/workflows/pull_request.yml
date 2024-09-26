@@ -30,13 +30,13 @@ jobs:
 
       - name: Lint code
         run: |
-          node_modules/.bin/tsc --noEmit
-          node_modules/.bin/eslint .
+          pnpm run tsc --noEmit
+          pnpm run eslint .
 
       - name: Lint commits
         if: github.event_name == 'pull_request'
         run: |
-          pnpx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+          pnpm run commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
 
   notify_success:
     runs-on: ubuntu-latest
