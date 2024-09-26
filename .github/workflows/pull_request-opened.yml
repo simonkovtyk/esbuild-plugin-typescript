@@ -1,5 +1,4 @@
 name: Pull request opened
-
 on:
   pull_request:
     types:
