@@ -23,13 +23,13 @@ jobs:
 
       - name: Lint code
         run: |
-          ./node_modules/.bin/tsc --noEmit
-          ./node_modules/.bin/eslint .
+          node_modules/.bin/tsc --noEmit
+          node_modules/.bin/eslint .
 
       - name: Lint commits
         if: github.event_name == 'pull_request'
         run: |
-          ./node_modules/.bin/commitlint --from ${{ github.event.pull_request.head.sha }}~${{ github.event.pull_request.commits }} --to ${{ github.event.pull_request.head.sha }} --verbose
+          node_modules/.bin/commitlint --from ${{ github.event.pull_request.head.sha }}~${{ github.event.pull_request.commits }} --to ${{ github.event.pull_request.head.sha }} --verbose
 
   notify_success:
     runs-on: ubuntu-latest
