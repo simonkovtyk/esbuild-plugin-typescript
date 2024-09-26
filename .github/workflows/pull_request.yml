@@ -23,13 +23,13 @@ jobs:
 
       - name: Lint code
         run: |
-          pnpm run lint:tsc
-          pnpm run lint:eslint
+          pnpm run tsc --noEmit
+          pnpm run eslint .
 
       - name: Lint commits
         if: github.event_name == 'pull_request'
         run: |
-          commitlint --from ${{ github.event.pull_request.head.sha }}~${{ github.event.pull_request.commits }} --to ${{ github.event.pull_request.head.sha }} --verbose
+          pnpm run commitlint --from ${{ github.event.pull_request.head.sha }}~${{ github.event.pull_request.commits }} --to ${{ github.event.pull_request.head.sha }} --verbose
 
   notify_success:
     runs-on: ubuntu-latest
