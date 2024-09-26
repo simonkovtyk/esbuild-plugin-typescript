@@ -26,7 +26,7 @@
 		"esbuild tsc"
 	],
 	"license": "MIT",
-	"version": "2.0.0-next.0",
+	"version": "2.0.0-next.1",
 	"bugs": "https://github.com/simonkovtyk/esbuild-plugin-typescript/issues",
 	"homepage": "https://github.com/simonkovtyk/esbuild-plugin-typescript",
 	"repository": {
@@ -52,6 +52,12 @@
 	"dependencies": {
 		"esbuild": ">=0.20.0"
 	},
+	"scripts": {
+		"lint:commit": "commitlint --edit",
+		"lint:eslint": "eslint .",
+		"lint:tsc": "tsc --noEmit",
+		"build": "tsc"
+	},
 	"devDependencies": {
 		"@types/node": "^22.5.4",
 		"typescript": "^5.5.4",
@@ -60,9 +66,13 @@
 		"@stylistic/eslint-plugin": "^2.8.0",
 		"@eslint/js": "^9.10.0",
 		"@types/eslint__js": "^8.42.3",
-		"husky": "^9.1.6"
-	},
-	"scripts": {
-		"lint:husky": "husky"
+		"husky": "^9.1.6",
+		"@commitlint/cli": "^19.5.0",
+		"@commitlint/config-conventional": "^19.5.0",
+		"@commitlint/cz-commitlint": "^19.5.0",
+		"commitizen": "^4.3.0",
+		"cz-conventional-changelog": "^3.3.0",
+		"esbuild": ">=0.20.0",
+		"inquirer": "9.3.6"
 	}
 }
