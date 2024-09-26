@@ -10,7 +10,7 @@ jobs:
   notify-greet:
     runs-on: ubuntu-latest
     permissions:
-      pull-requests: write
+      pull-requests: write-all
     steps:
       - name: Auto assign
         uses: actions/github-script@v7
